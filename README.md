@@ -1,4 +1,4 @@
-## weblogif-12.2.1 Oracle commerce 11.1 - Vagrant-puppet
+## weblogic-12.2.1 Oracle commerce 11.1 - Vagrant-puppet
 
 The puppet 4.2 reference implementation of https://github.com/biemond/biemond-orawls
 
@@ -27,44 +27,50 @@ We can use this folder for codebase also.
 - JDK 8 [jdk-8u72-linux-x64.tar.gz](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 - JCE Policy 8 [jce_policy-8.zip](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)
 - Oracle Commerce 11.1 [OCPlatform11.2.bin]
+[Download Software](https://www.dropbox.com/sh/hsirxpqkx8juav4/AABrDaA5QJ30cnVohGvCEfgBa?dl=0)
 
 ### Set up
 
 - vagrant up
 
-It will take some time .. Once all the boxes or up do a halt on all the boxes and rester them before you use them
+It will take some time .. Once all the boxes are up, do a halt on all the boxes and restart them before you use them
 
 - vagrant halt
 - vagrant up
 
-once all the boxes are up.
-
+Once done..
 ssh to the admin box
 
 - vagrant ssh admin
 
 Start admin server first.
-su as oracle/oracle
+```
+- su oracle (su as oracle/oracle)
 - cd /opt/oracle/middleware12c/
 - ./startWebLogic.sh
+```
 
 ssh to store box
 
 - vagrant ssh store
 
 Start "store" as managed server (it will prompt for username and password , provide weblogic/weblogic1)
-su as oracle/oracle
+```
+- su oracle (su as oracle/oracle)
 - cd /opt/oracle/middleware12c/bin
 - ./startManagedWebLogic.sh "wlsServer1" "http://10.10.10.10:7001"
+```
 
 ssh to bcc box
 
 - vagrant ssh bcc
 
 Start "bcc" as managed server (it will prompt for username and password , provide weblogic/weblogic1)
-su as oracle/oracle
+```
+- su oracle (su as oracle/oracle)
 - cd /opt/oracle/middleware12c/bin
 - ./startManagedWebLogic.sh "wlsServer2" "http://10.10.10.10:7001"
+```
 
 Make sure admin server is up when you are starting "store" and "bcc" for the first time.
 (once its done you can start store and bcc as standalone servers with out starting admin server)
