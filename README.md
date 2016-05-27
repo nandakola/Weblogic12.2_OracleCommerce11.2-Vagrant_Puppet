@@ -27,7 +27,7 @@ We can use this folder for codebase also.
 - JDK 8 [jdk-8u72-linux-x64.tar.gz](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 - JCE Policy 8 [jce_policy-8.zip](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)
 - Oracle Commerce 11.1 [OCPlatform11.2.bin]
-[Download Software](https://www.dropbox.com/sh/hsirxpqkx8juav4/AABrDaA5QJ30cnVohGvCEfgBa?dl=0)
+- [Download Software](https://www.dropbox.com/sh/hsirxpqkx8juav4/AABrDaA5QJ30cnVohGvCEfgBa?dl=0)
 
 ### Set up
 
@@ -77,7 +77,7 @@ Make sure admin server is up when you are starting "store" and "bcc" for the fir
 
 atg location
 ```
-/opt/oracle/middleware12c
+/opt/oracle/middleware12c/atg/ATG11.1
 ```
 weblogic location
 ```
